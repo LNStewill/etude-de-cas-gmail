@@ -1,0 +1,75 @@
+#main1, #main2 {
+    height: 100vh;
+    width: 100%;
+
+}
+
+#main1 {
+    background:url(../image/home-hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color:#ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+}
+  
+  .topnav div {
+    float: left;}
+    
+    .topnav a {
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Pour creer un lien aligne à droite de la barre de navigation */
+  .topnav .split {
+    float: right;
+  }
+  
+  .topnav .connexion {
+  background-color: #dc143c;
+    color: white;
+  }
+
+  /*+uniformisosns les boutons de la page */
+  button {
+    background-color: #dc143c;
+    color: #f5eded;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+  }
+
+  /*Pour le bouton retour en haut de la page*/
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }  
+
+  .content {
+    margin-left: 20px;
+    float: left;
+    width: 45%;
+  }
+  .content p {
+    color: #f5eded;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 70px; /*espacement vertiocal du texte*/
+    font-size: 50px; /*augementons la taille pour adapter au mieux au format d ela maquette */
+  }

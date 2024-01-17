@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>
+        Partiel Gmail single page
+    </title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+
+            <div>
+                <a class="active" href="#home"><img src="./image/mail.png" >&emsp;Gmail</a>
+            </div>
+            <div class="split">
+                <a href="#news">POUR LES PROS</a>
+                <a href="#contact">CONNEXION</a>
+                <a href="#main2"  class="connexion">CRÉER UN COMPTE</a>
+            </div>
+             
+             
+        </nav>
+    </header>
+    <br><br>
+    <section id="main1">
+        <article class="content">
+            < class="paragraph">
+                Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareils
+            </p>
+            <br>
+            <form action="#main2">
+                <button id="create-account">CRÉER UN COMPTE</button>
+            </form>
+
+        </article>
+        
+    </section>
+
+    <section id="main2">
+
+        <article>
+            <h2>Une boîte de réception entièrement repensée</h2>
+            <br>
+            <p>
+                Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux 
+                messages et Choisissez ceux que vous souhaitez lire en priorité. 
+            </p>
+        </article>
+        <form id="registration-form">
+            <fieldset>
+                <legend>Créer un compte</legend>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                <label for="surname">Prénom</label>
+                <input type="text" id="surname" name="surname" placeholder="Votre prenom" required>
+                <label for="email">Mail</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+                <label for="password">Choisissez votre mot de passe </label>
+                <input type="password" id="password" name="password" required>
+                <button id="submit">CRÉER UN COMPTE</button>
+            </fieldset>
+            
+        </form>
+    </section>
+</body>
+</html>

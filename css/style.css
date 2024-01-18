@@ -4,6 +4,12 @@
 
 body {
   font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0.0rem;
+  padding: 0.0rem;
 }
 #main1, #main2 {
   height: 100vh;
@@ -29,9 +35,10 @@ body {
   width: 100%;
   top: 0;
 }
-.topnav li {
+.topnav ul li {
   list-style: none;
-  float: left;
+  float: right;
+  margin: 1.6rem;
 }
 
 /*.topnav div {
@@ -55,7 +62,7 @@ body {
 }
 /* Pour creer un lien aligné à droite de la barre de navigation */
 .topnav .split {
-  float: right;
+  float: left;
 }
 
 .topnav .active {

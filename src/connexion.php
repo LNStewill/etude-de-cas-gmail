@@ -58,15 +58,14 @@
         <article class="content_2">
             <p class="paragraph">
                 Bienvenue dans votre espace null            </p>
-            
-            <?php
-
-                require_once __DIR__ . "/controller/Controller.class.php";
-                ControledeBase::event();
-            
-            ?>
+            <p class="paragraph">
+                <?php
+                    require_once /*__DIR__ .*/"../controller/controller.class.php";
+                    ControledeBase::event();
+                ?>
+            </p>
         </article>
-        <form id="registration-form">
+        <form id="registration-form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
             <fieldset class="container">
                 <legend>Connectez-vous à votre compte</legend>
                 <label for="email">Mail ou login*</label>

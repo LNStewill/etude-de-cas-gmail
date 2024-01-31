@@ -1,52 +1,59 @@
 :root {
-  font-size: 12px;
-}
-
-body {
-  font-family: sans-serif;
-  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 * {
-  margin: 0.0rem;
-  padding: 0.0rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#main1, #main2 {
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+main, #main1, #main2 {
   height: 100vh;
   width: 100%;
-
+  padding: 2.5rem;
+  margin-top: 3rem;
 }
 
 #main1 {
-  background:url('../image/home-hero.jpg');
-  background-position: center;
-  background-size: cover;
+  background:url('../image/home-hero.jpg') center/cover;
 }
 
-#main2 {
+main, #main2 {
   padding-left: 15.625rem;
   padding-right: 15.625rem;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color:#ffffff;
+header {
+  background-color: #ffffff;
   position: fixed;
   width: 100%;
   top: 0;
 }
+
+.topnav {
+  overflow: hidden;
+  width: 100%;
+}
+
 .topnav ul li {
   list-style: none;
   float: right;
   margin: 1.6rem;
+  height: 100%;
 }
 
-/*.topnav div {
-  float: left;}*/
-  
 .topnav a {
   color: #000000;
   text-align: center;
+  padding: 1.5rem;
   text-decoration: none;
   font-size: 1.2rem;
   line-height: 1.2rem;
@@ -60,53 +67,34 @@ body {
 .topnav .logo {
   width: 25%;
 }
-/* Pour creer un lien aligné à droite de la barre de navigation */
+
+/* Pour créer un lien aligné à droite de la barre de navigation */
 .topnav .split {
   float: left;
 }
 
 .topnav .active {
-background-color: #dc143c;
+  background-color: #dc143c;
   color: white;
 }
-main {
-  height: 100vh;
-}
-/*uniformisosns les boutons de la page */
-button {
-  background-color: #dc143c;
-  color: #f5eded;
-  padding: 0.625rem;
-  font-size: 1.25rem;
-  border: none;
-  padding: 1rem 1.25rem;
-  margin: 0.5rem 0;
-  border: none;
-  cursor: pointer;
-  opacity: 0.9;
-}  
 
 .content {
+  margin-top: 2.5rem;
   margin-left: 1.25rem;
   float: left;
   width: 45%;
 }
+
 .content p {
   color: #f5eded;
   letter-spacing: 0.075rem;
-  line-height: 4.375rem; /*espacement vertiocal du texte*/
-  font-size: 3.125rem; /*augementons la taille pour adapter au mieux au format d ela maquette */
+  line-height: 4.375rem;
+  font-size: 3.125rem;
 }
 
-/*Pour le formulaire */
+/* Pour le formulaire */
 * {
   box-sizing: border-box;
-}
-
-/* Ajout du padding aux containers */
-.container {
-  padding: 1rem;
-  background-color: white;
 }
 
 /* champs de saisie a 100% de largeur */
@@ -124,7 +112,8 @@ input[type=text]:focus, input[type=password] , input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
-/* mettons un style pour le bouton de soumission */
+
+/* Mettons un style pour le bouton de soumission */
 .registerbtn {
   background-color: #2542e5;
   color: white;
@@ -136,7 +125,19 @@ input[type=text]:focus, input[type=password] , input[type=email]:focus {
   margin-left: 40%;
   margin-right: 20%;
 }
-/* modifie le style par defaut de hr */
+/* Uniformisons les boutons de la page */
+button {
+  background-color: #dc143c;
+  color: #f5eded;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1.25rem;
+}  
+
+/* Modifions le style par defaut de hr */
 hr {
   border: 0.0625rem solid #f1f1f1;
   margin-bottom: 1.5625rem;
@@ -146,15 +147,18 @@ hr {
   text-align: center;
   width: 40%;
   margin-left: 25%;
+  margin-top: 6.5rem;
+
 }
 
 .content_2 .paragraph {
+  margin: 2.5rem;
   letter-spacing: 0.075rem;
-  line-height: 3.125rem; /*espacement vertiocal du texte*/
+  line-height: 3.125rem; /*espacement vertical du texte*/
   font-size: 1.875rem; /*augementons la taille pour adapter au mieux au format d ela maquette */
 }
 
-/*le boutant retout au top de la page */
+/* Le bouton retour au top de la page */
 #myBtn {
   position: fixed;
   bottom: 1.25rem;

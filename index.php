@@ -28,7 +28,7 @@
 
                 </li>
                 <li>
-                    <a href="./src/connexion.html" class="connexion ">CONNEXION</a>
+                    <a href="./src/connexion.php" class="connexion ">CONNEXION</a>
                 </li>
             </ul>
         </nav>

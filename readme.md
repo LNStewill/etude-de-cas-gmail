@@ -10,4 +10,4 @@
 
 
 
->Ensuite pour rendre dynamique nous allons utiliser ***php*** afin de mettre en place le reste des focntionnalités
+>Ensuite pour rendre dynamique nous allons utiliser ***php*** afin de mettre en place le reste des fonctionnalités

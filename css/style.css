@@ -52,7 +52,6 @@ header {
 .topnav ul li {
   list-style: none;
   float: right;
-  margin: 1.6rem;
   height: 100%;
 }
 
@@ -62,7 +61,7 @@ header {
   padding: 1.5rem;
   text-decoration: none;
   font-size: 1.2rem;
-  line-height: 1.2rem;
+  line-height: 3.2rem;
 }
 
 .topnav a:hover {
@@ -71,9 +70,12 @@ header {
 }
 
 .topnav .logo {
-  width: 25%;
+  width: 100%;
 }
-
+.span_img {
+    display: inline-block;
+    width: 1.2rem;
+}
 /* Pour créer un lien aligné à droite de la barre de navigation */
 .topnav .split {
   float: left;
@@ -114,7 +116,7 @@ input[type=text], input[type=password] , input[type=email]{
 }
 
 input[type=text]:focus, input[type=password] , input[type=email]:focus {
-  background-color: #ddd;
+  background-color: #ffeabdee;
   outline: none;
 }
 

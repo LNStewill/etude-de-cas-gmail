@@ -14,11 +14,8 @@
         <nav class="topnav">
             <ul>
                 <li class="split">
-                    <a href="#home"><img class="logo" src="./image/mail.png" alt="gmaillogo">&nbsp;Gmail</a>
+                    <a href="#home"><span class="span_img"><img class="logo" src="./image/mail.png" alt="gmaillogo"></span>&ensp;Gmail</a>
                 </li> 
-                
-
-                
                 <li>
                     <a href="#main2" class="inscription active">CRÉER UN COMPTE</a>
 

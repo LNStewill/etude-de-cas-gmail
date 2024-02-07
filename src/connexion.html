@@ -1,22 +1,3 @@
-<?php
-    session_start();
-        
-    # retenir l'email de la personne connectée pendant 1 an
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        # Récupérer l'adresse e-mail du formulaire
-        $email = $_POST["email"];
-
-        # Définir le cookie avec une durée de vie de 30 jours (en secondes)
-        setcookie("user_email", $email, time() + 30 * 24 * 60 * 60, "/");
-
-        /*
-        Rediriger l'utilisateur vers une autre page ou afficher un message de confirmation
-        header("Location: index.php");
-        exit();
-        */
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 <head>
@@ -33,7 +14,7 @@
         <nav class="topnav">
             <ul>
                 <li class="split">
-                    <a href="#home"><span class="span_img"><img class="logo" src="./image/mail.png" alt="gmaillogo"></span>&ensp;Gmail</a>
+                    <a href="#home"><span class="span_img"><img class="logo" src="../image/mail.png" alt="gmaillogo"></span>&ensp;Gmail</a>
                 </li>
                 <li>
                     <a href="#main2" class="inscription">CRÉER UN COMPTE</a>

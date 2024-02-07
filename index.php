@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr-FR">
-<head>
-    <meta name="description" content="Ceci est l'exercice du partiel gmail">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partiel Gmail single page</title>
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <header>
-        <nav class="topnav">
-            <ul>
-                <li class="split">
-                    <a href="#home"><img class="logo" src="./image/mail.png" alt="gmaillogo">&nbsp;Gmail</a>
-                </li> 
-                
-
-                
-                <li>
-                    <a href="#main2" class="inscription active">CRÉER UN COMPTE</a>
-
-                </li>
-                <li>
-                    <a href="#">POUR LES PROS</a>
-
-                </li>
-                <li>
-                    <a href="./src/connexion.php" class="connexion ">CONNEXION</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<?php
+    include_once "./controller/header.inc.php"
+?>
 
     <section id="main1">
         <article class="content">
@@ -60,31 +28,37 @@
                 messages et Choisissez ceux que vous souhaitez lire en priorité. 
             </p>
         </article>
-        <form id="registration-form">
-            <fieldset class="container">
-                <legend>Créer un compte</legend>
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                <label for="surname">Prénom</label>
-                <input type="text" id="surname" name="surname" placeholder="Votre prenom" required>
-                <label for="email">Mail</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <label for="password">Choisissez votre mot de passe </label>
-                <input type="password" id="password" name="password" required>
-                <hr>
-                <input type="submit" class="registerbtn" name="inscription" value="CRÉER UN COMPTE">
-            </fieldset>
-            
-        </form>
+        <div class="form-action" role="group" aria-labelledby="form">
+
+        <?php
+        include_once __DIR__."/controller/UserSubscription.class.php";
+    ?>
+            <form method="post" action="<?php print $_SERVER["PHP_SELF"]; ?>" id="registration-form">
+                <fieldset class="container">
+                    <legend>Créer un compte</legend>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="name" name="nom" placeholder="Votre nom" required aria-required="true">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required aria-required="true">
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" name="mail" placeholder="Votre email" required aria-required="true">
+                    <label for="mot_de_passe">Choisissez votre mot de passe </label>
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" required aria-required="true">
+                    <hr>
+                    <input type="submit" class="registerbtn" name="inscription" value="CRÉER UN COMPTE">
+                </fieldset>                
+            </form>
+        </div>
     </section>
 
-    <form action="#footer">
-        <button id="myBtn" title="Go to bottom">
-            <img src="./image/arrow.png" alt="vecteur_haut">
-        </button>
-    </form>
-    <footer id="footer">
+    <a href="#footer" id="myBtn" title="Go to bottom">
+        <img src="./image/arrow.png" alt="vecteur_haut">
+    </a>
 
+    <footer id="footer">
+        <p>
+            &copy; - Gmail - 2024
+        </p>
     </footer>
 </body>
 </html>

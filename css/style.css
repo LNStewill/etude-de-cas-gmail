@@ -2,6 +2,10 @@
   font-size: 16px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +14,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 1rem;
   line-height: 1.5;
   scroll-behavior: smooth;
 }
@@ -19,7 +22,7 @@ main, #main1, #main2 {
   height: 100vh;
   width: 100%;
   padding: 2.5rem;
-  margin-top: 3rem;
+  /*margin-top: 3rem;*/
 }
 
 #main1 {
@@ -29,6 +32,8 @@ main, #main1, #main2 {
 main, #main2 {
   padding-left: 15.625rem;
   padding-right: 15.625rem;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -36,6 +41,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99;
 }
 
 .topnav {
@@ -93,10 +99,9 @@ header {
 }
 
 /* Pour le formulaire */
-* {
-  box-sizing: border-box;
+fieldset {
+  padding: 2.5rem;
 }
-
 /* champs de saisie a 100% de largeur */
 input[type=text], input[type=password] , input[type=email]{
   width: 100%;
@@ -182,4 +187,29 @@ hr {
   bottom: 0;
   height: 0.625rem;
   border-radius: 0.25rem;
+  text-align: center;
+}
+
+/*Partie du controle d e smessages d'ereurs d=qui epruvent ppparaitre sur le formulaire lors de la soumission */
+
+
+/*
+.form-action{
+    max-width: 80rem;
+    margin: 5rem auto;
+}
+*/
+.form-action .warning{
+    padding: 1rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: .4rem;
+}
+.form-action .msg-success{
+    background: #079992;
+    color: #fff;
+}
+.form-action .msg-alert{
+    background: #b71540;
+    color: #fff;
 }

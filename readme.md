@@ -1,7 +1,7 @@
 #**Partiel Gmail single page** 🚀 
 ![cover](./image/result.png)
 
-##[Prévisualiser]{:target="_blank"}(https://lnstewill.github.io/etude-de-cas-gmail/)
+##[Prévisualiser](https://lnstewill.github.io/etude-de-cas-gmail/){:target="_blank"}
 
 
 **Maquette et objectif du projet**

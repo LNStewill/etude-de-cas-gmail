@@ -96,8 +96,7 @@ header {
 .content p {
   color: #f5eded;
   letter-spacing: 0.075rem;
-  line-height: 4.375rem;
-  font-size: 3.125rem;
+  font-size: 3rem;
 }
 
 /* Pour le formulaire */
@@ -192,8 +191,7 @@ hr {
   text-align: center;
 }
 
-/*Partie du controle d e smessages d'ereurs d=qui epruvent ppparaitre sur le formulaire lors de la soumission */
-
+/*Partie du controle des smessages d'ereurs qui peuvent apparaitre sur le formulaire lors de la soumission */
 
 /*
 .form-action{

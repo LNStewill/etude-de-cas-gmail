@@ -4,7 +4,7 @@
     # retenir l'email de la personne connectée pendant 1 an
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         # Récupérer l'adresse e-mail du formulaire
-        $email = $_POST["email"];
+        $email = $_POST["mail"];
 
         # Définir le cookie avec une durée de vie de 30 jours (en secondes)
         setcookie("user_email", $email, time() + 30 * 24 * 60 * 60, "/");
@@ -44,7 +44,7 @@
 
                 </li>
                 <li>
-                    <a href="connexion.html" class="connexion active">CONNEXION</a>
+                    <a href="connexion.php" class="connexion active">CONNEXION</a>
                 </li>
             </ul>
         </nav>
@@ -54,7 +54,8 @@
 
         <article class="content_2">
             <p class="paragraph">
-                Bienvenue dans votre espace null            </p>
+                Bienvenue dans votre espace <?php print $_POST['mail'] ?>             
+            </p>
             <p class="paragraph">
                 <?php
                     require_once /*__DIR__ .*/"../controller/controller.class.php";
@@ -65,10 +66,10 @@
         <form id="registration-form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
             <fieldset class="container">
                 <legend>Connectez-vous à votre compte</legend>
-                <label for="email">Mail ou login*</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <label for="password">Mot de passe*</label>
-                <input type="password" id="password" name="password" required>
+                <label for="mail">Mail ou login*</label>
+                <input type="email" id="mail" name="mail" placeholder="Votre email" required>
+                <label for="mot_de_passe">Mot de passe*</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
                 <hr>
                 <input type="submit" class="registerbtn subscriptionbtn" name="connexion" value="CONNEXION A VOTRE COMPTE" >
             </fieldset>

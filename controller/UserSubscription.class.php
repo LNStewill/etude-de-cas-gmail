@@ -25,8 +25,8 @@ class UserSubscription {
                 $_requete_Verif = $connexion->prepare("SELECT id FROM utilisateurs WHERE mail = ?");
                 # $_requete_Verif->bindParam(1, $nom);
                 # $_requete_Verif->bindParam(2, $prenom);
-                # $_requete_Verif->bindParam(3, $mail);
-                # $_requete_Verif->execute();
+                $_requete_Verif->bindParam(1, $mail);
+                $_requete_Verif->execute();
                
                 if ($_requete_Verif->rowCount() > 0) {
                     // L'utilisateur existe déjà, afficher un message d'erreur
@@ -44,8 +44,8 @@ class UserSubscription {
                         // Binder les paramètres
                         $requete->bindParam(1, $nom);
                         $requete->bindParam(2, $prenom);
-                        $requete->bindParam(1, $mail);
-                        $requete->bindParam(2, $motDePasseHash);
+                        $requete->bindParam(3, $mail);
+                        $requete->bindParam(4, $motDePasseHash);
 
                         // Exécuter la requête
                         $requete->execute();

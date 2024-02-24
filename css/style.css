@@ -29,8 +29,6 @@ h1,h2,h3{
 main, #main1, #main2 {
   height: 100vh;
   width: 100%;
-  padding: 2.5rem;
-  /*margin-top: 3rem;*/
 }
 
 #main1 {
@@ -38,8 +36,6 @@ main, #main1, #main2 {
 }
 
 main, #main2 {
-  padding-left: 15.625rem;
-  padding-right: 15.625rem;
   overflow: scroll;
   scroll-behavior: smooth;
 }
@@ -68,8 +64,8 @@ header {
   text-align: center;
   padding: 1.5rem;
   text-decoration: none;
-  font-size: 1.2rem;
-  line-height: 4.2rem;
+  font-size: inherit;
+  display: block;
 }
 
 .topnav a:hover {
@@ -79,10 +75,12 @@ header {
 
 .topnav .logo {
   width: 100%;
+  display: block;
 }
 .span_img {
     display: inline-block;
-    width: 1.2rem;
+    width: 2.2rem;
+    vertical-align: -.3rem;
 }
 /* Pour créer un lien aligné à droite de la barre de navigation */
 .topnav .split {
@@ -95,10 +93,13 @@ header {
 }
 
 .content {
-  margin-top: 2.5rem;
-  margin-left: 1.25rem;
   float: left;
-  width: 45%;
+  width: 30%;
+  top: 50%;
+  transform: translateY(-50%) translateX(30%);
+  position: relative;
+  left: auto;
+  right: 3%;
 }
 
 .content p {
@@ -110,6 +111,11 @@ header {
 /* Pour le formulaire */
 fieldset {
   padding: 2.5rem;
+}
+
+form {
+  max-width:90rem ;
+  margin: 0 auto;
 }
 /* champs de saisie a 100% de largeur */
 input[type=text], input[type=password] , input[type=email]{
@@ -132,12 +138,13 @@ input[type=text]:focus, input[type=password] , input[type=email]:focus {
   background-color: #2542e5;
   color: white;
   padding: 1rem 1.25rem;
-  margin: 0.5rem 0;
+  margin: 0 auto;
   border: none;
   cursor: pointer;
   opacity: 0.9;
-  margin-left: 40%;
-  margin-right: 20%;
+  display:block;
+   
+  
 }
 /* Uniformisons les boutons de la page */
 button {
@@ -148,7 +155,9 @@ button {
   border: none;
   cursor: pointer;
   opacity: 0.9;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  border-radius: .4rem;
+  line-height: 2.5rem;
 }  
 
 /* Modifions le style par defaut de hr */
@@ -160,13 +169,16 @@ hr {
 .content_2 {
   text-align: center;
   width: 40%;
-  margin-left: 25%;
-  margin-top: 6.5rem;
-
+  margin : 0 auto;
+  display: block;
+}
+.content_2, form {
+  position: relative;
+  top: 10%;
 }
 
 .content_2 .paragraph {
-  margin: 2.5rem;
+  margin: 0 auto;
   letter-spacing: 0.075rem;
   line-height: 3.125rem; /*espacement vertical du texte*/
   font-size: 1.875rem; /*augementons la taille pour adapter au mieux au format d ela maquette */

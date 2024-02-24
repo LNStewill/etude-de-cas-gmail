@@ -54,7 +54,7 @@
 
         <article class="content_2">
             <p class="paragraph">
-                Bienvenue dans votre espace <?php print $_POST['mail'] ?>             
+                Bienvenue dans votre espace             
             </p>
             <p class="paragraph">
                 <?php

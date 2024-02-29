@@ -1,5 +1,5 @@
 <?php
-    include_once "./controller/header.inc.php"
+    require_once __DIR__. "./controller/header.inc.php"
 ?>
 
     <section id="main1">
@@ -31,9 +31,9 @@
         <div class="form-action" role="group" aria-labelledby="form">
 
         <?php
-        include_once __DIR__."/controller/UserSubscription.class.php";
+        require_once __DIR__."/controller/UserSubscription.class.php";
     ?>
-            <form method="post" action="<?php print $_SERVER["PHP_SELF"]; ?>" id="registration-form">
+            <form method="post" action="<?php print $_SERVER["PHP_SELF"]; ?>" id="registration-form" class="registration-form">
                 <fieldset class="container">
                     <legend>Créer un compte</legend>
                     <label for="nom">Nom</label>

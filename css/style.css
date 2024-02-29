@@ -113,7 +113,7 @@ fieldset {
   padding: 2.5rem;
 }
 
-form {
+.registration-form, .login_form {
   max-width:90rem ;
   margin: 0 auto;
 }
@@ -172,7 +172,7 @@ hr {
   margin : 0 auto;
   display: block;
 }
-.content_2, form {
+.content_2, .form-action,.registration-form ,.login_form {
   position: relative;
   top: 10%;
 }

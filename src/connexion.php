@@ -16,39 +16,10 @@
         */
     }
 
+?>    
+<?php
+    require_once __DIR__."./../controller/header.inc.php"
 ?>
-<!DOCTYPE html>
-<html lang="fr-FR">
-<head>
-    <meta name="description" content="Ceci est l'exercice du partiel gmail">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partiel Gmail single page</title>
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <header>
-        <nav class="topnav">
-            <ul>
-                <li class="split">
-                    <a href="#home"><span class="span_img"><img class="logo" src="../image/mail.png" alt="gmaillogo"></span>&ensp;Gmail</a>
-                </li>        
-                <li>
-                    <a href="#main2" class="inscription">CRÉER UN COMPTE</a>
-
-                </li>
-                <li>
-                    <a href="#">POUR LES PROS</a>
-
-                </li>
-                <li>
-                    <a href="connexion.php" class="connexion active">CONNEXION</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
     <main >
 
@@ -58,12 +29,12 @@
             </p>
             <p class="paragraph">
                 <?php
-                    require_once /*__DIR__ .*/"../controller/controller.class.php";
+                    require_once __DIR__ ."./../controller/controller.class.php";
                     ControledeBase::event();
                 ?>
             </p>
         </article>
-        <form id="registration-form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+        <form id="login_form" class="login-form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
             <fieldset class="container">
                 <legend>Connectez-vous à votre compte</legend>
                 <label for="mail">Mail ou login*</label>
@@ -82,8 +53,10 @@
             <img src="../image/arrow.png" alt="vecteur_haut">
         </button>
     </form>
-    <footer id="footer">
-
+    <footer id="footer" class="footer">
+        <p>
+            &copy; - Gmail - 2024
+        </p>
     </footer>
 </body>
 </html>

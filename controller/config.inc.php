@@ -1,18 +1,6 @@
 <?php
-
 #Créé le 01/02/2024 par Nathan Stéwill LOUFOUA Dan sle cadre du projet Gmail lors du cours php à ITIC P
 #ICI TOUS LES NOMS DE VARIABLES A UTILISER SUR LE PROJET
-
-
-const title = "Partiel Gmail single page"; /* constante */
-class User{
-    public $_css = "./css/style.css";
-    public $_lang = ["fr","en","es"];
-}
-
-#Pour appeller la classe 
-$_user_new = new User();
-
 
 /*Variables Pour la partie connexion*/
 

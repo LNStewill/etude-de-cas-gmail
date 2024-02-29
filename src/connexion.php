@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    /*session_start();
         
     # retenir l'email de la personne connectée pendant 1 an
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -14,7 +14,7 @@
         header("Location: index.php");
         exit();
         */
-    }
+    
 
 ?>    
 <?php
@@ -22,10 +22,40 @@
 ?>
 
     <main >
+        <?php
+            if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
+                $nom = $_SESSION['nom'];
+                $prenom = $_SESSION['prenom'];
+                echo '<article class="content_2">
+                        <p class="paragraph">
+                            Bonjour, ' . $prenom . ' ' . $nom . '. Bienvenue dans votre espace !
+                        </p>
+                        <p class="paragraph">';
+                require_once __DIR__ . "/../controller/controller.class.php";
+                ControledeBase::event();
+                echo '</p>
+                      </article>';
+            } else {
+                // L'utilisateur n'est pas connecté, affichez le formulaire de connexion
+                echo '<form id="login_form" class="login-form" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
+                        <fieldset class="container">
+                            <legend>Connectez-vous à votre compte</legend>
+                            <label for="mail">Mail ou login*</label>
+                            <input type="email" id="mail" name="mail" placeholder="Votre email" required>
+                            <label for="mot_de_passe">Mot de passe*</label>
+                            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+                            <hr>
+                            <input type="submit" class="registerbtn subscriptionbtn" name="connexion" value="CONNEXION A VOTRE COMPTE">
+                        </fieldset>
+                    </form>';
+            }
+            ?>
+            
 
-        <article class="content_2">
+
+        <!--<article class="content_2">
             <p class="paragraph">
-                Bienvenue dans votre espace             
+            Bonjour, $prenom $nom Bienvenue dans votre espace !        
             </p>
             <p class="paragraph">
                 <?php
@@ -45,7 +75,7 @@
                 <input type="submit" class="registerbtn subscriptionbtn" name="connexion" value="CONNEXION A VOTRE COMPTE" >
             </fieldset>
             
-        </form>
+        </form>-->
     </main>
 
     <form action="#footer">

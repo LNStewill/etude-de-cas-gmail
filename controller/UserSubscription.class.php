@@ -41,6 +41,10 @@ class UserSubscription {
                         // Préparer la requête SQL pour insérer les données dans la base de données
                         $requete = $connexion->prepare("INSERT INTO utilisateurs (nom, prenom, mail, mot_de_passe) VALUES (?, ?, ?, ?)");
                 
+                        // Stockez les informations dans des variables de session
+                        $_SESSION['nom'] = $nom;
+                        $_SESSION['prenom'] = $prenom;
+
                         // Binder les paramètres
                         $requete->bindParam(1, $nom);
                         $requete->bindParam(2, $prenom);

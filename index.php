@@ -33,6 +33,15 @@
         <?php
         require_once __DIR__."/controller/UserSubscription.class.php";
     ?>
+    <?php
+
+        if (isset($_SESSION['errors'])) {
+            foreach ($_SESSION['errors'] as $error) {
+                echo '<p class="warning msg-alert">' . $error . '</p>';
+            }
+            unset($_SESSION['errors']); // Supprimez les erreurs de la session
+        }
+    ?>
             <form method="post" action="<?php print $_SERVER["PHP_SELF"]; ?>" id="registration-form" class="registration-form">
                 <fieldset class="container">
                     <legend>Créer un compte</legend>

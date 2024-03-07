@@ -1,70 +1,32 @@
 <?php
-    /*session_start();
-        
-    # retenir l'email de la personne connectée pendant 1 an
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        # Récupérer l'adresse e-mail du formulaire
-        $email = $_POST["mail"];
-
-        # Définir le cookie avec une durée de vie de 30 jours (en secondes)
-        setcookie("user_email", $email, time() + 30 * 24 * 60 * 60, "/");
-
-        /*
-        Rediriger l'utilisateur vers une autre page ou afficher un message de confirmation
-        header("Location: index.php");
-        exit();
-        */
-    
-
-?>    
-<?php
     require_once __DIR__."./../controller/header.inc.php"
 ?>
 
     <main >
+        <div class="form-action" role="group" aria-labelledby="form">
         <?php
-            if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
-                $nom = $_SESSION['nom'];
-                $prenom = $_SESSION['prenom'];
-                echo '<article class="content_2">
-                        <p class="paragraph">
-                            Bonjour, ' . $prenom . ' ' . $nom . '. Bienvenue dans votre espace !
-                        </p>
-                        <p class="paragraph">';
-                require_once __DIR__ . "/../controller/controller.class.php";
-                ControledeBase::event();
-                echo '</p>
-                      </article>';
-            } else {
-                // L'utilisateur n'est pas connecté, affichez le formulaire de connexion
-                echo '<form id="login_form" class="login-form" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="post">
-                        <fieldset class="container">
-                            <legend>Connectez-vous à votre compte</legend>
-                            <label for="mail">Mail ou login*</label>
-                            <input type="email" id="mail" name="mail" placeholder="Votre email" required>
-                            <label for="mot_de_passe">Mot de passe*</label>
-                            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
-                            <hr>
-                            <input type="submit" class="registerbtn subscriptionbtn" name="connexion" value="CONNEXION A VOTRE COMPTE">
-                        </fieldset>
-                    </form>';
+        require_once __DIR__ . "/../controller/controller.class.php";
+        ?>
+        <?php
+
+            if (isset($_SESSION['login_errors'])) {
+                foreach ($_SESSION['login_errors'] as $error) {
+                    echo '<p class="warning msg-alert">' . $error . '</p>';
+                }
+                unset($_SESSION['login_errors']); // Supprimez les erreurs de la session
+            }
+        ?>
+        <form id="login_form" class="login_form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+
+        <?php
+            if (isset($_SESSION['success_message'])) {
+                foreach ($_SESSION['success_message'] as $succes) {
+                    //$succes = $_SESSION['success_message'];
+                    echo '<p class="warning msg-success">' . $succes . '</p>';
+                }
+                unset($_SESSION['success_message']); // Supprimez les messages de succes de la session
             }
             ?>
-            
-
-
-        <!--<article class="content_2">
-            <p class="paragraph">
-            Bonjour, $prenom $nom Bienvenue dans votre espace !        
-            </p>
-            <p class="paragraph">
-                <?php
-                    require_once __DIR__ ."./../controller/controller.class.php";
-                    ControledeBase::event();
-                ?>
-            </p>
-        </article>
-        <form id="login_form" class="login-form" action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
             <fieldset class="container">
                 <legend>Connectez-vous à votre compte</legend>
                 <label for="mail">Mail ou login*</label>
@@ -75,7 +37,8 @@
                 <input type="submit" class="registerbtn subscriptionbtn" name="connexion" value="CONNEXION A VOTRE COMPTE" >
             </fieldset>
             
-        </form>-->
+        </form>
+        </div>
     </main>
 
     <form action="#footer">

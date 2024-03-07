@@ -39,7 +39,7 @@
             if (basename($_SERVER['PHP_SELF']) === 'index.php') {
                 echo '<ul>
                     <li class="split">
-                        <a href="#home"><span class="span_img"><img class="logo" src="./image/mail.png" alt="gmaillogo"></span> Gmail</a>
+                        <a href="index.php"><span class="span_img"><img class="logo" src="./image/mail.png" alt="gmaillogo"></span> Gmail</a>
                     </li>
                     <li>
                         <a href="#main2" class="inscription active">CRÉER UN COMPTE</a>
@@ -54,10 +54,10 @@
             } else {
                 echo '<ul>
                     <li class="split">
-                        <a href="#home"><span class="span_img"><img class="logo" src="../image/mail.png" alt="gmaillogo"></span> Gmail</a>
+                        <a href="./../index.php"><span class="span_img"><img class="logo" src="../image/mail.png" alt="gmaillogo"></span> Gmail</a>
                     </li>
                     <li>
-                        <a href="#main2" class="inscription">CRÉER UN COMPTE</a>
+                        <a href="./../index.php?#main2" class="inscription">CRÉER UN COMPTE</a>
                     </li>
                     <li>
                         <a href="#">POUR LES PROS</a>

@@ -172,7 +172,7 @@ hr {
   margin : 0 auto;
   display: block;
 }
-.content_2, .form-action,.registration-form ,.login_form {
+.content_2, .form-action,.registration-form ,.login_form, .xdebug-error {
   position: relative;
   top: 10%;
 }
